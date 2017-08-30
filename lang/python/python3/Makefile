@@ -161,7 +161,7 @@ endef
 
 ifdef CONFIG_PACKAGE_python3-setuptools
 define Build/Compile/python3-setuptools
-	$(STAGING_DIR_HOSTPKG)/bin/pip3 install \
+	$(STAGING_DIR_HOSTPKG)/bin/python3 $(STAGING_DIR_HOSTPKG)/bin/pip3 install \
 		--ignore-installed \
 		--root=$(PKG_BUILD_DIR)/install-setuptools --prefix=. \
 		$(PKG_BUILD_DIR)/Lib/ensurepip/_bundled/setuptools-*.whl
@@ -170,7 +170,7 @@ endif # CONFIG_PACKAGE_python3-setuptools
 
 ifdef CONFIG_PACKAGE_python3-pip
 define Build/Compile/python3-pip
-	$(STAGING_DIR_HOSTPKG)/bin/pip3 install \
+	$(STAGING_DIR_HOSTPKG)/bin/python3 $(STAGING_DIR_HOSTPKG)/bin/pip3 install \
 		--ignore-installed \
 		--root=$(PKG_BUILD_DIR)/install-pip --prefix=. \
 		$(PKG_BUILD_DIR)/Lib/ensurepip/_bundled/pip-*.whl

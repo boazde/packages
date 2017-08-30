@@ -1,4 +1,5 @@
 # OpenWrt packages feed
+This fork used for building https://home-assistant.io/ on OpenWrt
 
 ## Description
 
